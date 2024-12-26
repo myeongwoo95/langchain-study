@@ -1,0 +1,17 @@
+# 가상환경
+venv/
+env/
+.env/
+langchain-env/
+
+# Python 캐시 파일
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VS Code 설정
+.vscode/
+
+# 기타 임시 파일
+*.log
+.DS_Store

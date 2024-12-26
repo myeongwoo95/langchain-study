@@ -11,9 +11,11 @@ chat = ChatOpenAI(
   ] 
 )
 
+# 이렇게하면 실시간으로 터미널에 응답값이 출력됨
 resp = chat([
   HumanMessage(content="맛있는 스테이크 굽는 법을 알려주세요"),
 ])
 
-response_text = resp.content # 응답 텍스트를 저장
+# 응답값을 저장하여 사용하고싶을 때
+response_text = resp.content 
 print(response_text)
