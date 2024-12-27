@@ -36,3 +36,17 @@
 2. 사용자 입력의 벡터를 미리 준비된 DB에서 검색해 문장 가져오기
 3. 획득한 유사 문장과 질문을 조합해 프롬프트 작성 (PromptTemplate을 사용)
 4. 생성한 프롬프트를 사용해 언어모델 호출
+
+## chainlit 사용
+
+- 실행 명령어: chainlit run <파일명>.py
+
+## RetrivalQA로 RAG 개발 코드를 간단하게
+
+- RetrivalQA를 사용하는데 있어 Retriever가 반드시 필요하다. (db로부터 얻음 > database.as_retriever())
+- RetrivalQA를 사용하면 정보원 텍스트 구축(DB로부터 조회해서 텍스트 합치기), PropmptTemplate 작성등을 하지않아도 된다.
+- RetrivalQA의 또 다른 장점은 정보 출처가 되는 문장을 생성하는 방법을 선택할 수 있다.
+  우리가 구현한 예시는 텍스트 결합시 생성되는 문자열이 굉장히 작기때문에 PromptTemplate을 이용해서 최종적으로 질문 내용을 만들 수 있지만
+  정보 출처로서 여러 긴 문장이 필요한 질문에는 대응할 수 없다.
+  이러한 문제에 대응하기 위해 랭체인은 Refine, Map reduce, Map re-rank같은 결합 방법을 제공한다.
+- Retrieval 모듈은 준비된 Retrievers를 사용해 위키백과를 정보원으로 활용할 수 있다.

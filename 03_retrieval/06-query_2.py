@@ -19,7 +19,7 @@ query = "비행 자동차의 최고 속도는?"
 
 documents = database.similarity_search(query)
 
-documents_string = "" # 문서 내용을 저장할 변수를 초기화
+documents_string = ""
 
 for document in documents:
     documents_string += f"""
