@@ -43,6 +43,8 @@
 
 ## RetrivalQA로 RAG 개발 코드를 간단하게
 
+- RetrivalQA는 LangChain이 제고하는 질의응답 시스템으로 다른 문서를 검색하고, 해당 문서에 대한 질문에 대답할 수 있도록 설계되었다.
+- Retrievers는 특정 단어로 검색을 하면 관련된 여러 문서(문장)을 얻을 수 있는 일련의 기능을 총칭한다. (pdf, wikipedia)
 - RetrivalQA를 사용하는데 있어 Retriever가 반드시 필요하다. (db로부터 얻음 > database.as_retriever())
 - RetrivalQA를 사용하면 정보원 텍스트 구축(DB로부터 조회해서 텍스트 합치기), PropmptTemplate 작성등을 하지않아도 된다.
 - RetrivalQA의 또 다른 장점은 정보 출처가 되는 문장을 생성하는 방법을 선택할 수 있다.
@@ -50,3 +52,8 @@
   정보 출처로서 여러 긴 문장이 필요한 질문에는 대응할 수 없다.
   이러한 문제에 대응하기 위해 랭체인은 Refine, Map reduce, Map re-rank같은 결합 방법을 제공한다.
 - Retrieval 모듈은 준비된 Retrievers를 사용해 위키백과를 정보원으로 활용할 수 있다.
+
+## RePhraseQueryRetriever
+
+- RePhraseQueryRetriever는 질문을 재구성하기 위한 Retriever로 llm_chain과 retriever를 인자로 받음
+- RePhraseQueryRetriever는 먼저 질문을 재구성하고, 그 결과를 WikipediaRetriever에 전달해 검색을 수행한다.
