@@ -1,7 +1,6 @@
 from langchain.embeddings import OpenAIEmbeddings
 from numpy import dot # 벡터유사도 계산
 from numpy.linalg import norm
-from tomlkit import document # 벡터유사도 계산
 
 embeddings = OpenAIEmbeddings(
   model="text-embedding-ada-002"
