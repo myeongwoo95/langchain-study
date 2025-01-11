@@ -24,8 +24,9 @@ tools.append(WriteFileTool(
 agent = initialize_agent(
   tools,
   chat,
-  agent=AgentType.STRUCTURED_CHAT_ZERO_SHOT_REACT_DESCRIPTION, # 여러 입력을 가진 툴을 사용하는 에이전트트
+  agent=AgentType.STRUCTURED_CHAT_ZERO_SHOT_REACT_DESCRIPTION, # 여러 입력을 가진 툴을 사용하는 에이전트
   verbose=True,
+  max_iterations=5  # 최대 반복 횟수
 )
 
 result = agent.run("경주시의 특산품을 검색해 result.txt 파일에 한국어로 저장하세요.")

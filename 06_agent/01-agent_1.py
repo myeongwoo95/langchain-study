@@ -18,6 +18,7 @@ agent = initialize_agent(
   llm=chat,
   agent=AgentType.CHAT_ZERO_SHOT_REACT_DESCRIPTION, # 하나의 입력만 받아드릴 수 있는 툴을 사용하는 에이전트
   verbose=True,
+  max_iterations=5  # 최대 반복 횟수
 )
 
 result = agent.run("""아래 URL에 접속하여 기사 내용을 정리하여 한국어로 답하세요.
