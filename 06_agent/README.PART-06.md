@@ -20,6 +20,12 @@
 - 4. 3에서 얻은 결과를 통해 과업이 달성되고 있는지를 확인한다.
 - 5. 에이전트가 작업을 완료했다고 판단할 수 있을 때 까지 2~4를 반복한다.
 
+### 특정 사례에 특화된 Tool을 정리한 ToolKit
+
+- GmailToolkit
+- SQLDatabaseToolkit
+- JiraToolkit
+
 ### Agent.Type: 대화(Chat) 관련 타입
 
 #### 1. CHAT_CONVERSATIONAL_REACT_DESCRIPTION
